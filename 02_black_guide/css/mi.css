@@ -1,0 +1,87 @@
+/* 顶部广告 start */
+.header{
+    width:100%;
+    height: 120px;
+    overflow: hidden; /*将图片超出规定范围的部分隐藏*/
+    position: relative;
+    background-color: #f00;
+}
+
+/*
+面试常见的css问题:
+    内容居中问题:一个大盒子中有个小盒子，如何让小盒子在大盒子中垂直和水平居中?
+    1.弹性盒子模型
+    2.定位
+    3.表格
+*/
+
+/*图片的居中*/
+.header img{
+    height: 120px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+/* 顶部广告 end */
+
+/*黑色导览 start*/
+.black-nav{
+    width: 100%;
+    height: 40px;
+    line-height: 40px; /*文字垂直居中*/
+    background-color: #333;
+    font-size: 12px;
+}
+
+.black-nav .wrap{
+    width: 1226px;
+    margin: 0 auto;
+}
+
+.black-nav .wrap .black-nav-left{
+    float: left;
+}
+
+.black-nav .wrap .black-nav-right{
+    float: right;
+}
+
+.black-nav .wrap li{
+    position: relative;
+    float: left;
+}
+.black-nav .wrap a{
+    color: #b0b0b0;
+}
+
+.black-nav .wrap li span{
+    color: #424242;
+    margin: 0 3.6px;
+}
+
+.download{
+    width: 124px;
+    height: 148px;
+    background:#fff;
+    box-shadow: 0 1px 5px #aaa;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -62px;
+    overflow: hidden;
+}
+
+.download img{
+    width: 90px;
+    margin: 18px auto 0;
+}
+
+.download p{
+    color: #333;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+/*黑色导览 end*/
