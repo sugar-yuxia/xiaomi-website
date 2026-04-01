@@ -35,7 +35,7 @@
     font-size: 12px;
 }
 
-.black-nav .wrap{
+.wrap{
     width: 1226px;
     margin: 0 auto;
 }
@@ -63,7 +63,7 @@
 
 .download{
     width: 124px;
-    height: 148px;
+    height: 0px;
     background:#fff;
     box-shadow: 0 1px 5px #aaa;
     position: absolute;
@@ -84,4 +84,183 @@
     line-height: 30px;
 }
 
+.black-nav-left li:hover>.download{
+    /* hover 鼠标放上去的时候
+    > 直接子元素 */
+     height: 148px;
+
+}
+
+.stri{
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid #fff;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -8px;
+    display: none;
+}
+
+.black-nav-left>li:hover>.stri{
+    /*
+    1. 只选 亲儿子 .black-nav-left > li { }
+    2. 只选 孙子 .black-nav-left > li > li { }
+    3. 儿子 + 孙子 全都选 .black-nav-left li { }
+    */
+    display: block;
+
+}
+
+.cart{
+    width: 120px;
+    height: 40px;
+    background-color: #424242;
+    margin-left: 25px;
+    position: relative;
+
+}
+
+.cart:hover{
+    background: #fff;
+
+}
+
+.cart:hover>a{
+    color: #ff6700;
+
+}
+
+/* 修改“购物车”字体为垂直 */
+.cart i{
+    font-style: normal;
+    margin-right: 8px;
+}
+
+.cart-list{
+    width: 361px;
+    height: 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    position: absolute;
+    right: 0;
+    top: 40px;
+    color: #424242;
+    overflow: hidden;
+    line-height: 100px;
+    /* display: none; */
+
+}
+
+.cart:hover>.cart-list{
+    /* hover 鼠标放上去的时候
+    > 直接子元素 */
+     height: 100px;
+     /* display: block; */
+
+}
+
 /*黑色导览 end*/
+
+/* 白色导航 start */
+.white-nav{
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+}
+
+.logo{
+    width: 55px;
+    height: 55px;
+    background-color: #ff6700;
+    float: left;
+    margin-top: 22.5px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+.logo>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /*transition = 让 CSS 变化有平滑动画*/
+    transition: all 0.2s;
+}
+
+.mi-home{
+    left: -55px;
+}
+
+.mi-logo{
+    left: 0;
+}
+
+.logo:hover>.mi-home{
+    left: 0px;
+}
+
+.logo:hover>.mi-logo{
+    left: 55px;
+}
+
+.nav-bar{
+    width: 875px;
+    height: 100px;
+    line-height: 100px;
+    float: left;
+}
+
+.nav-bar li{
+    float: left;
+}
+
+.nav-bar li a{
+    color: #333;
+    padding: 0 10px;
+}
+
+.nav-bar li a:hover{
+    color: #ff6700;
+}
+
+.search{
+    width: 296px;
+    height: 100px;
+    float: right;
+}
+
+.search input{
+    width: 244px;
+    height: 50px;
+    float: left;
+    /* 给 input 搜索框加一圈 1px 粗、实线、浅灰色的边框 */
+    border: 1px solid #e0e0e0;
+    /* box-sizing: border-box 让边框不撑大盒子，保证宽度精准*/
+    /* content-box  宽度 = 内容宽度   边框、内边距 都往外撑，会让盒子变大
+    border-box  宽度 = 内容 + 内边距 + 边框    全部包在一起 盒子永远不会被撑大*/
+    box-sizing: border-box;
+    margin-top: 25px;
+    padding: 0 10px;
+    border-right: 0;
+    /* 选中输入框后没有黑色边框 */
+    outline: none;
+}
+
+.search button{
+    width: 52px;
+    height: 50px;
+    float: right;
+    border: 1px solid #e0e0e0;
+    margin-top: 25px;
+}
+
+.search button:hover{
+    background-color: #ff6700;
+    color: #fff;
+}
+
+/* 白色导航 start */
