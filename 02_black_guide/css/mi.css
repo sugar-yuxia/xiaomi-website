@@ -169,6 +169,7 @@
     width: 100%;
     height: 100px;
     background-color: #fff;
+    position: relative;
 }
 
 .logo{
@@ -208,10 +209,11 @@
 }
 
 .nav-bar{
-    width: 875px;
+    width: 820px;
     height: 100px;
     line-height: 100px;
     float: left;
+    margin-left: 55px;
 }
 
 .nav-bar li{
@@ -261,6 +263,42 @@
 .search button:hover{
     background-color: #ff6700;
     color: #fff;
+}
+
+.nav-bar-list{
+    width: 100%;
+    height: 229px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    /* 水平偏移 | 垂直偏移 | 模糊程度 | 颜色 */
+    box-shadow: 0 3px 4px rgba(0,0,0,0.1);
+    position: absolute;
+    left: 0;
+    top: 100px;
+    display: none;
+}
+
+.nav-bar li:hover>.nav-bar-list{
+    display: block;
+}
+
+.nav-bar-list li{
+    line-height: normal;
+    border-right: 1px solid #eee;
+}
+
+.nav-bar-list .name{
+    font-size: 12px;
+    color: #333;
+}
+
+.nav-bar-list .price{
+    font-size: 12px;
+    color: #ff6700;
+}
+
+.nav-bar-list .img-box img{
+    height: 150px;
 }
 
 /* 白色导航 start */
